@@ -8,7 +8,7 @@
 実行バイナリのあるディレクトリをマウントしてコンテナを起動したうえで、 `athrill2` コマンドでその実行バイナリを指定してください。
 
 ```sh
-docker run -v "/PATH/TO/BINARY/DIRECTORY:/work" --workdir=/work mikoto2000/hakoniwa-ev3rt-runtime bash
+docker run -it --rm -v "$(pwd):/work" --workdir=/work mikoto2000/hakoniwa-ev3rt-runtime sh
 athrill2 -i -c1 -d device_config.txt -m memory.txt asp
 ```
 
